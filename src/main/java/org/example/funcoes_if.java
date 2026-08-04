@@ -4,6 +4,95 @@ import java.util.Scanner;
 
 public class funcoes_if {
 
+    public static void exercicio8(){
+
+            double renda;
+            double imposto = 0;
+
+            Scanner entrada = new Scanner(System.in);
+
+            System.out.println("Digite o valor da renda:");
+            renda = entrada.nextDouble();
+
+            if (renda <= 2000){
+                System.out.println("Isento");
+
+            } else if (renda <= 3000){
+                imposto = (renda - 2000) * 0.08;
+                System.out.printf("R$ %.2f%n", imposto);
+
+            } else if (renda <= 4500){
+                imposto = (1000 * 0.08); // faixa 2000 até 3000
+                imposto += (renda - 3000) * 0.18;
+                System.out.printf("R$ %.2f%n", imposto);
+
+            }
+            else {
+                imposto = (1000 * 0.08); // 2000 até 3000
+                imposto += (1500 * 0.18); // 3000 até 4500
+                imposto += (renda - 4500) * 0.28;
+                System.out.printf("R$ %.2f%n", imposto);
+            }
+        }
+
+
+    public static void exercicio7(){
+        double x,y;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Digite o valor de x: ");
+        x = sc.nextDouble();
+
+        System.out.println("Digite o valor de y: ");
+        y = sc.nextDouble();
+
+        if (x > 0 && y > 0){
+            System.out.println("o valor se encontra no quadrante Q1");
+        }
+        else if (x > 0 && y < 0){
+            System.out.println("o valor se encontra no quadrante Q4");
+        }
+        else if (x < 0 && y > 0){
+            System.out.println("o valor se encontra no quadrante Q2");
+        }
+        else if (x < 0 && y < 0){
+            System.out.println("o valor se encontra no quadrante Q3");
+        }
+        else if (x == 0 && y == 0){
+            System.out.println("ORIGEM");
+        }
+        else{
+            System.out.println("valores invalidos");
+        }
+
+    }
+
+
+    public static void exercicio6(){
+
+        double entrada;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite um valor: ");
+        entrada = sc.nextDouble();
+
+        if (entrada > 0 && entrada < 25){
+            System.out.println("intervalo (0,25)");
+        }
+        else if (entrada > 25 && entrada < 50){
+            System.out.println("intervalo (25,50)");
+        }
+        else if (entrada > 50 && entrada < 75){
+            System.out.println("intervalo (50,75)");
+        }
+        else if (entrada > 75 && entrada < 100){
+            System.out.println("intervalo (75,100)");
+        }
+        else
+            System.out.println("fora do intervalo");
+    }
+
+
     public static void exercicio5(){
 
         System.out.println("\n **Com base na tabela abaixo, escreva um programa que leia o código de um item e a quantidade deste item. A\n" +
@@ -152,7 +241,7 @@ public class funcoes_if {
     public static void main(String[] args) {
 
         int entrada;
-        System.out.println("qual exercicio voce quer fazer 1 | 2 | 3 | 4 | 5");
+        System.out.println("qual exercicio voce quer fazer 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8");
         Scanner sc = new Scanner(System.in);
         entrada = sc.nextInt();
 
@@ -171,8 +260,15 @@ public class funcoes_if {
         else if (entrada == 5){
             exercicio5();
         }
-
-
+        else if (entrada == 6){
+            exercicio6();
+        }
+        else if(entrada == 7){
+            exercicio7();
+        }
+        else if (entrada == 8){
+            exercicio8();
+        }
         sc.close();
     }
 }
