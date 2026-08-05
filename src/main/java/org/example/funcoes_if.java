@@ -270,5 +270,7 @@ public class funcoes_if {
             exercicio8();
         }
         sc.close();
+
+        System.out.println("\nFINISH");
     }
 }
