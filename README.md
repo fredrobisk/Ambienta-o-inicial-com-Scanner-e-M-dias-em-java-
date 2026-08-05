@@ -1,4 +1,4 @@
-# ☕ Ambientação Inicial com Scanner e Médias em Java
+# ☕ Ambientação Inicial em Java
 
 Projeto desenvolvido durante os estudos iniciais de **Java**, com foco na entrada de dados pelo terminal e na realização de cálculos de médias.
 
